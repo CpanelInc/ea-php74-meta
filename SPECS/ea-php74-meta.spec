@@ -38,7 +38,7 @@ BuildRequires: iso-codes
 # Letting pear pull in php-cli as a dependency will ensure that php-cli is installed before pear.
 # Requires:      %{?scl_prefix}php-common
 # Requires:      %{?scl_prefix}php-cli
-Requires:      %{?scl_prefix}pear
+# Requires:      %{?scl_prefix}pear
 
 %description
 This is the main package for %scl Software Collection,
