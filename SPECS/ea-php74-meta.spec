@@ -14,7 +14,7 @@
 
 Summary:       Package that installs PHP 7.4
 Name:          %scl_name
-Version:       7.4.0
+Version:       7.4.1
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -180,5 +180,5 @@ sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_ve
 
 
 %changelog
-* Tue Dec 24 2019 Daniel Muey <dan@cpanel.net> - 7.4.0-1
+* Tue Dec 24 2019 Daniel Muey <dan@cpanel.net> - 7.4.1-1
 - ZC-5848: Initial packaging
