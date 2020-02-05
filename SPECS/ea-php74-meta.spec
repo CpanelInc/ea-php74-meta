@@ -33,12 +33,8 @@ BuildRequires: help2man
 # Temporary work-around
 BuildRequires: iso-codes
 
-# Commenting out the dependencies on php-cli and php-common
-# Not necessary because pear depends on php-cli and php-cli depends on php-common
-# Letting pear pull in php-cli as a dependency will ensure that php-cli is installed before pear.
-# Requires:      %{?scl_prefix}php-common
-# Requires:      %{?scl_prefix}php-cli
-Requires:      %{?scl_prefix}pear
+Requires:      %{?scl_prefix}php-common
+Requires:      %{?scl_prefix}php-cli
 
 %description
 This is the main package for %scl Software Collection,
@@ -49,7 +45,6 @@ that install PHP 7.4 language.
 Summary:   Package that handles %scl Software Collection.
 Group:     Development/Languages
 Requires:  scl-utils
-Requires:  %scl
 
 %description runtime
 Package shipping essential scripts to work with %scl Software Collection.
