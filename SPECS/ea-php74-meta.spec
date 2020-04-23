@@ -17,7 +17,7 @@ Name:          %scl_name
 Version:       7.4.5
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 1
+%define        release_prefix 2
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -139,6 +139,11 @@ tmp_version=$(echo %{scl_name_version} | sed -re 's/([0-9])([0-9])/\1\.\2/')
 sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_version}/g" %{SOURCE0} \
   | tee -a %{buildroot}%{_root_sysconfdir}/rpm/macros.%{scl}-config
 
+# Remove empty share/[man|locale]/ directories
+find %{buildroot}/opt/cpanel/%{scl}/root/usr/share/man/ -type d -empty -delete
+find %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale/ -type d -empty -delete
+mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
+
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
@@ -156,7 +161,6 @@ sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_ve
 %dir /opt/cpanel/ea-php74/root/usr/share/doc
 %dir /opt/cpanel/ea-php74/root/usr/include
 %dir /opt/cpanel/ea-php74/root/usr/share/man
-%dir /opt/cpanel/ea-php74/root/usr/share/man/man1
 %dir /opt/cpanel/ea-php74/root/usr/bin
 %dir /opt/cpanel/ea-php74/root/usr/var
 %dir /opt/cpanel/ea-php74/root/usr/var/cache
@@ -178,6 +182,9 @@ sed -e 's/@SCL@/%{scl_macro_base}%{scl_name_version}/g' -e "s/@VERSION@/${tmp_ve
 
 
 %changelog
+* Thu Apr 23 2020 Daniel Muey <dan@cpanel.net> - 7.4.5-2
+- ZC-6611: Do not package empty share directories
+
 * Thu Apr 16 2020 Cory McIntire <cory@cpanel.net> - 7.4.5-1
 - EA-9007: Update ea-php74 from v7.4.2 to v7.4.5
 
