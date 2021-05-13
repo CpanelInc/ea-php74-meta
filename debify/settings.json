@@ -1,0 +1,12 @@
+{
+    "remove_from_requires": [
+        "scl-utils-build",
+        "scl-utils"
+    ],
+    "do_not_build_packages": [
+        "ea-php74-build",
+        "ea-php74-scldevel"
+    ],
+    "dont_relativise_ontar": 1,
+    "fix_dh_usrlocal": 1
+}
