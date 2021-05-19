@@ -154,10 +154,6 @@ mkdir -p $DEB_INSTALL_ROOT/usr/local/cpanel/whostmgr/addonfeatures
 install $SOURCE3 $DEB_INSTALL_ROOT/usr/local/cpanel/whostmgr/addonfeatures/$name
 
 cp ./LICENSE $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/usr/share/doc/ea-php74-runtime-$version
-cp ./README $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/usr/share/doc/ea-php74-runtime-$version
-
-gzip ./ea-php74.7
-cp ./ea-php74.7.gz $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/usr/share/man/man7
 
 echo "FILELIST"
 echo `pwd`

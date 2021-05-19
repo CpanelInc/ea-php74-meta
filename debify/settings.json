@@ -8,5 +8,8 @@
         "ea-php74-scldevel"
     ],
     "dont_relativise_ontar": 1,
+    "disclude_sources" : [ "README" ],
+    "remove_from_install" : [ "(?:^|/)README$", "(?:^|/)enable$", "(?:^|/ea-php74.7.gz)" ],
+    "dont_override_config" : 1,
     "fix_dh_usrlocal": 1
 }
