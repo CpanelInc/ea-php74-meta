@@ -4,9 +4,6 @@ source debian/vars.sh
 
 set -x
 
-install -D -m 644 enable $DEB_INSTALL_ROOT$_scl_scripts/enable
-install -D -m 644 enable $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/enable
-
 mkdir -p $DEB_INSTALL_ROOT/etc/opt
 mkdir -p $DEB_INSTALL_ROOT/etc/pki
 mkdir -p $DEB_INSTALL_ROOT/etc/pm/config.d
