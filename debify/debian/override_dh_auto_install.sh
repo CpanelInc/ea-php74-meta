@@ -9,7 +9,10 @@ mkdir -p $DEB_INSTALL_ROOT/etc/pki
 mkdir -p $DEB_INSTALL_ROOT/etc/pm/config.d
 mkdir -p $DEB_INSTALL_ROOT/etc/pm/power.d
 mkdir -p $DEB_INSTALL_ROOT/etc/pm/sleep.d
-mkdir -p $DEB_INSTALL_ROOT/etc/scl/prefixes/ea-php74
+
+mkdir -p $DEB_INSTALL_ROOT/etc/scl/prefixes
+echo $_scl_prefix > $DEB_INSTALL_ROOT/etc/scl/prefixes/$scl_name
+
 mkdir -p $DEB_INSTALL_ROOT/etc/skel
 mkdir -p $DEB_INSTALL_ROOT/etc/sysconfig
 mkdir -p $DEB_INSTALL_ROOT/etc/X11/applnk
@@ -26,7 +29,6 @@ mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/pki
 mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/pm/config.d
 mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/pm/power.d
 mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/pm/sleep.d
-mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/scl/prefixes/ea-php74
 mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/skel
 mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/sysconfig
 mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php74/root/etc/X11/applnk
