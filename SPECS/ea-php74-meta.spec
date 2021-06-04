@@ -14,7 +14,7 @@
 
 Summary:       Package that installs PHP 7.4
 Name:          %scl_name
-Version:       7.4.19
+Version:       7.4.20
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -182,6 +182,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 
 
 %changelog
+* Fri Jun 04 2021 Cory McIntire <cory@cpanel.net> - 7.4.20-1
+- EA-9831: Update ea-php74 from v7.4.19 to v7.4.20
+
 * Thu May 06 2021 Cory McIntire <cory@cpanel.net> - 7.4.19-1
 - EA-9752: Update ea-php74 from v7.4.18 to v7.4.19
 
