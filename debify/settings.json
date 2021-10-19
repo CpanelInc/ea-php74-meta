@@ -11,5 +11,8 @@
     "disclude_sources" : [ "README" ],
     "remove_from_install" : [ "(?:^|/)README$", "(?:^|/)enable$", "(?:^|/)ea-php74.7.gz" ],
     "dont_override_config" : 1,
+    "no_files_pkgs": {
+        "ea-php74": "has no files, only brings in other packages i.e. a meta package"
+    },
     "fix_dh_usrlocal": 1
 }
