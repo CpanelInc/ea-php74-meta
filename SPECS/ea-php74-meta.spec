@@ -17,7 +17,7 @@ Name:          %scl_name
 Version:       7.4.33
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 1
+%define        release_prefix 2
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -182,6 +182,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 
 
 %changelog
+* Tue Apr 11 2023 Julian Brown <julian.brown@cpanel.net> - 7.4.33-2
+- ZC-10320: Do not build on Ubuntu 22
+
 * Thu Nov 03 2022 Cory McIntire <cory@cpanel.net> - 7.4.33-1
 - EA-11038: Update ea-php74 from v7.4.32 to v7.4.33
 
