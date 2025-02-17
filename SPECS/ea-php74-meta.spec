@@ -14,7 +14,7 @@ Name:          %scl_name
 Version:       7.4.33
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 3
+%define        release_prefix 4
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -179,6 +179,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 
 
 %changelog
+* Thu Feb 13 2025 Dan Muey <daniel.muey@webpros.com> - 7.4.33-4
+- ZC-12614: Build on Alma 9
+
 * Tue Nov 28 2023 Julian Brown <julian.brown@cpanel.net> - 7.4.33-3
 - ZC-11419: Correct Ubuntu build issues
 
