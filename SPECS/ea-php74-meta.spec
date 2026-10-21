@@ -14,7 +14,7 @@ Name:          %scl_name
 Version:       7.4.33
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 4
+%define        release_prefix 5
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -179,6 +179,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 
 
 %changelog
+* Wed Oct 21 2026 Cory McIntire <cory.mcintire@webpros.com> - 7.4.33-5
+- EA-13613: Backport fix for CVE-2026-109618 and CVE-2026-109619
+
 * Thu Feb 13 2025 Dan Muey <daniel.muey@webpros.com> - 7.4.33-4
 - ZC-12614: Build on Alma 9
 
